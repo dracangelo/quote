@@ -5,6 +5,18 @@
             <p>{{bestQuote().author}}</p>
             <p>created by:{{bestQuote().createdby}}</p>
         </div>
-
+        <div class="contaoner-fluid col-md-6">
+            <h1><span><b>JUST QUOTE IT</b></span></h1>
+            <ul>
+                <div *ngFor='let quote of quotes;let i = index'>
+                    <li>{{quote.quote}}</li>
+                    <button (click)='toggleDetails(i)' class="btn btn-primary">Show More</button>
+                    <app-quot-detail>*ngIf='quote.showDetails'[quote]='quote' (isComplete) = 'deleteQuote($event,i)</app-quot-detail>
+                </div>
+            </ul>
+            <div class="container-fluid col-md-6">
+                <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+            </div>
+        </div>
     </div>
 </div>
