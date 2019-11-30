@@ -1,30 +1,10 @@
-
-    <!-- <div class="container-fluid">
-        <h2>Quotes</h2>
-        <div class="container-fluid row col-md-5">
-        <app-form (addQuote)="addNewQuote($event)"></app-form>
-    </div>
-    <div class="col-md-7">
-        <div class="dquote" *ngFor='let quote of quote, let i  index'>
-                {{quote.name}}
-            <div class="detail">
-                
-                <br>
-                <!-- <button class="btn btn-primary btnspace" (click)='toggleDetails(i)' type="button" name="button">toggle</button> -->
-                <!-- <br>
-
-                <app-quot-detail *ngIf="quote.showDetails" [quote]='quote' (isDelete)='deleteQuote($event, i)' (isAdd)='addQuote($event, i)' (isminus)='minusQuote($event, i)'></app-quot-detail>
-            </div>
+<div class="container-fluid">
+    <div class="container-fluid row">
+        <div class="quote" bestQuote *ngIf="BestQuote().upvote ! ==0" class="col-md-12">
+            <p>{{bestQuote().quote}}</p>
+            <p>{{bestQuote().author}}</p>
+            <p>created by:{{bestQuote().createdby}}</p>
         </div>
-    </div>
-</div> --> 
 
-<div>
-        <h1>My Quotes</h1>
-        <hr>
-        <ul>
-            <li *ngFor='let quotes of Quote'>
-              {{quote.name}}
-            </li>
-        </ul>
-      </div>
+    </div>
+</div>
