@@ -15,6 +15,7 @@ import { DateCountPipe } from './date-count.pipe';
     FormComponent,
     QuotDetailComponent,
     DateCountPipe
+    
   ],
   imports: [
     BrowserModule,
