@@ -8,8 +8,8 @@ import {Quote} from '../quote'
 })
 export class QuoteComponent implements OnInit {
   quote = [
-    new Quote( "Sometimes all one needs is a hug", "drac"),
-    new Quote("All I want is out","maniac")
+    new Quote( "Sometimes all one needs is a hug", "drac", "All one needs is a hug to keep them going."),
+    new Quote("All I want is out","maniac", "out is the only permanent solution to temporary problem", )
 
 
 

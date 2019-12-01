@@ -5,8 +5,14 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class DateCountPipe implements PipeTransform {
 
-  transform(value: any, ...args: any[]): any {
-    return null;
-  }
+ 
+  transform(value:any): number {
+    let today:Date = new Date ();
+    let zeroDay:any =new Date(today.getFullYear(), today.getMonth()+1,today.getDay())
+    let dateDifference = Math.abs(zeroDay-value)
+    const daySeconds= 86400;
+    let dateSeconds = dateDifference*0.001;
+    var todayCount = dateSeconds/daySeconds;
 
+  }
 }
