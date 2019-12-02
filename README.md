@@ -7,6 +7,8 @@
 # Description 
 - The app helps you to add, upvote,downvote and delete a quote.
 
+# 
+
 # Quote
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
