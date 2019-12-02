@@ -42,6 +42,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - Typescript
 - JavaScript
 
+## Acknowledgements
+- I would like to acknowledge my collegue **Simon kimani** for his tremendous help in this project. I would also like to thank **Hammerton "paddington" Mutuku** for being with me through out the process.
+
 ## Contacts
 email: kelvinmbuguaw@gmail.com
 phone : 0702158483
