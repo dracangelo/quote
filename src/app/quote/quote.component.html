@@ -4,7 +4,7 @@
     <div class="jumbotron">
       <h1><b>JUST QUOTE IT</b></h1>
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
           <div *ngFor="let quote of quotes; let i = index">
             {{ quote.quote }}
 
@@ -20,7 +20,7 @@
                 [quote]="quote"
                 (isComplete)="deleteQuote($event, i)"
               >
-              </app-quot-detail>
+            </app-quot-detail>&nbsp;<br>
               <button (click)="toggleDetails(i)" class="btn btn-primary">
                 Show More</button
               >&nbsp;
@@ -29,7 +29,6 @@
               </button> -->
             </div>
           </div>
-
           <div class="col-md-6">
             <app-form (addQuote)="addNewQuote($event)"></app-form>
           </div>
