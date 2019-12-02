@@ -35,7 +35,7 @@ let toDelete=confirm(`Are you sure you want to delete ${this.quote[index].quote}
     this.quote.push(quote)
   }
   
-  bestQuote() {
+  coolQuote() {
     let upVoteArr: number[] = [];
     for (let i of this.quote) {
       upVoteArr.push(i.upvote);

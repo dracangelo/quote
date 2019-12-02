@@ -5,6 +5,6 @@
         <h2>added: {{quote.addedby}}</h2>
         <button (click) = "upvote()" class="btn btn-primary">up {{quote.upvote}}</button>
         <button (click) = "downvote()" class="btn btn-danger">down {{quote.downvote}}</button>
-        <p>uploaded on {{quote.finalDate|datecount}} days ago</p>
+        <p>uploaded on {{quote.finalDate|dateCount}} days ago</p>
         <button (click)='quoteDelete(true)' class="btn btn-danger">delete quote</button>
     </div>

@@ -14,5 +14,10 @@ export class DateCountPipe implements PipeTransform {
     let dateSeconds = dateDifference*0.001;
     var todayCount = dateSeconds/daySeconds;
 
+    if (todayCount <=0){
+      return 0;
+    }else{
+      return todayCount;
+    }
   }
 }
