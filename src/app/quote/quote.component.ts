@@ -7,44 +7,50 @@ import {Quote} from '../quote'
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-  quote = [
-    new Quote( "Sometimes all one needs is a hug", "drac", "All one needs is a hug to keep them going.",new Date(2019,11,11)),
+  quotes:Quote[] = [
+    new Quote("Sometimes all one needs is a hug", "drac", "All one needs is a hug to keep them going.",new Date(2019,11,11)),
     new Quote("All I want is out","maniac", "out is the only permanent solution to temporary problem",new Date(2019,11,11) )
 
 
 
   ];
   toggleDetails(index){
-    this.quote[index].showDetails = !this.quote[index].showDetails;
+    this.quotes[index].showDetails = !this.quotes[index].showDetails;
   }
   3
-  deleteQuote(isDelete, index){
-    if(isDelete) {
-let toDelete=confirm(`Are you sure you want to delete ${this.quote[index].quote}?`)
+  deleteQuote(isComplete, index){
+    if(isComplete) {
+       let toDelete=confirm(`Are you sure you want to delete ${this.quotes[index].quote}?`)
     
     if (toDelete){
-      this.quote.splice(index,1)
+      this.quotes.splice(index,1)
     }
     }
   }
-  addNewQuote(quote){
-    let quoteLength = this.quote.length;
-    quote.id = quoteLength+1;
-    quote.addedBy =quote.added;
-    quote.finalDate = new Date(quote.finalDate)
-    this.quote.push(quote)
+  addNewQuote(quotes){
+    let quoteLength = this.quotes.length;
+    quotes.id = quoteLength+1;
+    quotes.finalDate = new Date(quotes.finalDate)
+    this.quotes.push(quotes)
   }
   
   coolQuote() {
     let upVoteArr: number[] = [];
-    for (let i of this.quote) {
+    for (let i of this.quotes) {
       upVoteArr.push(i.upvote);
     }
     let maxVote = Math.max(...upVoteArr);
-    let highestVotedQuote = this.quote.find(quote => quote.upvote === maxVote);
+    let highestVotedQuote = this.quotes.find(quote => quote.upvote === maxVote);
     return highestVotedQuote;
   }
  
+  upvote(index){
+    this.quotes[index].upvote+=1;
+  }
+
+  downvote(index){
+    this.quotes[index].downvote+=1;
+  }
   constructor() { }
 
   ngOnInit() {

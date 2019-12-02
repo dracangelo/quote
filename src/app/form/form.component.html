@@ -3,23 +3,23 @@
     <h2>Create a new Quote</h2>
     
     <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
-        <div class="container-fluid form-group">
+        <div class="form-group">
   
             <label for="quote">Quote</label>
-            <textarea class="form-control" id="quote" [(ngModel)]="newQuote.quote" quote="quote" #quote='ngModel' name='quote' required></textarea>
-            <!-- <div [hidden]="quote.valid || quote.pristine" class="alert alert-primary">
+            <input class="form-control" id="quote" [(ngModel)]="newQuote.quote" quote="quote" #quote='ngModel' name='quote' required>
+            <div [hidden]="quote.valid || quote.pristine" class="alert alert-primary">
                 <p>Quote is required</p>
-            </div> -->
+            </div>
             
   
         </div>
-        <div class="container-fluid form-group">
+        <div class="form-group">
   
             <label for="author">Author</label>
             <textarea class="form-control" id="quote" [(ngModel)]="newQuote.author" quote="author" #author="ngModel" name='author' required></textarea>
-            <!-- <div [hidden]="author.valid || author.pristine" class="alert alert-primary" >
+            <div [hidden]="author.valid || author.pristine" class="alert alert-primary" >
                 <p>Author is required</p>
-            </div> -->
+            </div> 
   
         </div>
         <div class="form-group">
@@ -31,14 +31,14 @@
             </div> -->
   
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="complete">Completion</label>
             <input type='date' id="complete" [(ngModel)]="newQuote.finalDate" quote="finalDate" name='date' #finalDate="ngModel" required>
-            <!-- <div [hidden]="finalDate.valid || finalDate.pristine" class="alert alert-primary">
+           <div [hidden]="finalDate.valid || finalDate.pristine" class="alert alert-primary">
                 <p>Date is required</p>
-            </div> -->
+            </div> 
   
-        </div>
+        </div> -->
         <button type="submit" class="btn btn-primary">Add Quote</button>
     </form>
   </div>

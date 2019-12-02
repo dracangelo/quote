@@ -13,12 +13,7 @@ export class QuotDetailComponent implements OnInit {
 
     this.isComplete.emit(complete);
   }
-  upvote(){
-    this.quote.upvote += 1;
-  }
-  downvote(){
-    this.quote.downvote +=1;
-  }
+  
 
   constructor() { }
 
