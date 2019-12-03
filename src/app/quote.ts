@@ -8,7 +8,8 @@ export class Quote {
     public quote:string,
     public author:string,
     public details:string,
-    public finalDate:Date
+    public finalDate:Date,
+    public addedBy : string,
   ){
     this.showDetails=false;
     this.upvote = 0;
